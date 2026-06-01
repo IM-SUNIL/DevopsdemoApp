@@ -28,7 +28,7 @@ services:
     environment:
       - PORT=5000
       - NODE_ENV=production
-      - FRONTEND_URL=http://localhost:3000
+      - FRONTEND_URL=https://devops.sunilsinghrajput.in
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/taskmanager?schema=public
     volumes:
       - ./backend:/app
@@ -45,7 +45,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:5000/api
+      - NEXT_PUBLIC_API_URL=https://devops.sunilsinghrajput.in/api
     volumes:
       - ./frontend:/app
       - /app/node_modules
