@@ -9,7 +9,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [apiStatus, setApiStatus] = useState("loading"); // 'loading', 'healthy', 'error'
-  
+
   // Form State
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -132,10 +132,10 @@ export default function Home() {
           </h1>
           <p>Production Workspace Dashboard</p>
         </div>
-        
+
         <div className="api-status">
-          <span 
-            className={`status-dot ${apiStatus}`} 
+          <span
+            className={`status-dot ${apiStatus}`}
             title={`Backend Status: ${apiStatus}`}
           />
           <span>
@@ -174,10 +174,10 @@ export default function Home() {
 
       {/* Main Grid */}
       <div className="dashboard-grid">
-        
+
         {/* Left Column: Form */}
         <aside className="glass-panel">
-          <h2 className="panel-title">Create Task</h2>
+          <h2 className="panel-title">Add Task</h2>
           <form onSubmit={handleCreateTask}>
             <div className="form-group">
               <label htmlFor="task-title">Title</label>
@@ -192,7 +192,7 @@ export default function Home() {
                 disabled={submitting}
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="task-desc">Description</label>
               <textarea
@@ -204,7 +204,7 @@ export default function Home() {
                 disabled={submitting}
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="task-status">Initial Status</label>
               <select
@@ -219,10 +219,10 @@ export default function Home() {
                 <option value="completed">Completed</option>
               </select>
             </div>
-            
-            <button 
-              type="submit" 
-              className="btn" 
+
+            <button
+              type="submit"
+              className="btn"
               disabled={submitting || !title.trim()}
             >
               {submitting ? "Creating..." : "Add to Dashboard"}
@@ -233,7 +233,7 @@ export default function Home() {
         {/* Right Column: Task List */}
         <main className="glass-panel">
           <h2 className="panel-title">Pipeline Tasks</h2>
-          
+
           {loading ? (
             <div style={{ textAlign: "center", padding: "3rem" }}>
               <div className="loading-spinner"></div>
@@ -261,7 +261,7 @@ export default function Home() {
                       {task.status.replace("-", " ")}
                     </span>
                   </div>
-                  
+
                   <div className="task-footer">
                     <span className="task-date">
                       Added: {new Date(task.createdAt).toLocaleDateString(undefined, {
@@ -271,7 +271,7 @@ export default function Home() {
                         minute: "2-digit"
                       })}
                     </span>
-                    
+
                     <div className="task-actions">
                       <select
                         aria-label="Change status"
@@ -283,7 +283,7 @@ export default function Home() {
                         <option value="in-progress">In Progress</option>
                         <option value="completed">Completed</option>
                       </select>
-                      
+
                       <button
                         className="btn-delete"
                         onClick={() => handleDeleteTask(task.id)}
@@ -291,14 +291,14 @@ export default function Home() {
                         aria-label="Delete Task"
                       >
                         {/* Trash Icon SVG */}
-                        <svg 
-                          width="16" 
-                          height="16" 
-                          viewBox="0 0 24 24" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2.5" 
-                          strokeLinecap="round" 
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
                           strokeLinejoin="round"
                         >
                           <polyline points="3 6 5 6 21 6"></polyline>
