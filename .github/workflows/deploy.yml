@@ -20,5 +20,6 @@ jobs:
             sudo bash -c '
               cd /opt/DevopsdemoApp
               git pull origin main
+              docker compose down
               docker compose up --build -d 
             '
