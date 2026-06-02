@@ -21,5 +21,6 @@ jobs:
               cd /opt/DevopsdemoApp
               git pull origin main
               docker compose down
+              docker builder prune -f
               docker compose up --build -d 
             '
