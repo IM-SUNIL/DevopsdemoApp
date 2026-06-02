@@ -314,6 +314,18 @@ export default function Home() {
         </main>
 
       </div>
+
+      {/* Footer */}
+      <footer className="app-footer">
+        <div className="footer-copyright">
+          &copy; {new Date().getFullYear()} Task Manager Hub. All rights reserved.
+        </div>
+        <div className="footer-links">
+          <a href="#" className="footer-link">About</a>
+          <a href="#" className="footer-link">Privacy Policy</a>
+          <a href="#" className="footer-link">Terms of Service</a>
+        </div>
+      </footer>
     </div>
   );
 }
