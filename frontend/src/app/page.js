@@ -318,7 +318,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="app-footer">
         <div className="footer-copyright">
-          &copy; {new Date().getFullYear()} Task Manager Hub Sunil Singh. All rights reserved.
+          &copy; {new Date().getFullYear()} Task Manager Hub by Sunil Singh Rajput. All rights reserved.
         </div>
         <div className="footer-links">
           <a href="#" className="footer-link">About</a>
