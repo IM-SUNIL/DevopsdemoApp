@@ -232,7 +232,7 @@ export default function Home() {
 
         {/* Right Column: Task List */}
         <main className="glass-panel">
-          <h2 className="panel-title">Pipeline Tasks</h2>
+          <h2 className="panel-title">Pipeline Tasks This is a Demo Change</h2>
 
           {loading ? (
             <div style={{ textAlign: "center", padding: "3rem" }}>
