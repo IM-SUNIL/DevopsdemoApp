@@ -22,5 +22,9 @@ jobs:
               git pull origin main
               docker compose down
               docker builder prune -f
+              docker volume prune -a -f
+              docker image prune -a -f
+              docker system prune -a -f
               docker compose up --build -d 
+              docker compose exec backend npx prisma db push
             '
